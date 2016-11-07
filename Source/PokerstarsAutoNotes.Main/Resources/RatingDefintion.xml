@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<pokerstarsautonotes>
+  <definitions>
+    <definition id="0" vpip="0" pfr="" bb="" hands="" />
+    <definition id="1" vpip="10" pfr="" bb="" hands="" />
+    <definition id="2" vpip="20" pfr="" bb="" hands="" />
+    <definition id="3" vpip="30" pfr="" bb="" hands="" />
+    <definition id="4" vpip="40" pfr="" bb="" hands="" />
+    <definition id="5" vpip="50" pfr="" bb="" hands="" />
+    <definition id="6" vpip="60" pfr="" bb="" hands="" />
+    <definition id="7" vpip="70" pfr="" bb="" hands="" />
+  </definitions>
+</pokerstarsautonotes> 

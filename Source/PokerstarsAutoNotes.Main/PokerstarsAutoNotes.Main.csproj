@@ -1,0 +1,342 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{74CFAADE-3726-421C-BB87-80CEF1F99DC5}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PokerstarsAutoNotes</RootNamespace>
+    <AssemblyName>PokerstarsAutoNotes</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <RunPostBuildEvent>OnOutputUpdated</RunPostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\PokerstarsAutoNotes.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\PokerstarsAutoNotes.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>bin\Debug\PokerstarsAutoNotes.xml</DocumentationFile>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>bin\Release\PokerstarsAutoNotes.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\IconMain.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Autofac">
+      <HintPath>..\..\packages\Autofac.2.6.1.841\lib\NET40\Autofac.dll</HintPath>
+    </Reference>
+    <Reference Include="Autofac.Configuration">
+      <HintPath>..\..\packages\Autofac.2.6.1.841\lib\NET40\Autofac.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Security, Version=2.0.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Npgsql.2.0.11\lib\Net40\Mono.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Npgsql, Version=2.0.11.0, Culture=neutral, PublicKeyToken=5d8b90d52f46fda7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Npgsql.2.0.11\lib\Net40\Npgsql.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Interactive">
+      <HintPath>..\..\packages\Ix_Experimental-Main.1.1.10823\lib\Net4\System.Interactive.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reactive">
+      <HintPath>..\..\packages\Rx-Main.1.0.11226\lib\Net4\System.Reactive.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Windows.Presentation" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Bootstrapper.cs" />
+    <Compile Include="Enums\DbFieldEnum.cs" />
+    <Compile Include="Enums\DefinitionEnum.cs" />
+    <Compile Include="Enums\HmPokerSite.cs" />
+    <Compile Include="Enums\PokerGame.cs" />
+    <Compile Include="Enums\PokerGamePlayer.cs" />
+    <Compile Include="Enums\PokerGameType.cs" />
+    <Compile Include="Enums\PokerSiteEnum.cs" />
+    <Compile Include="Enums\PtPokerSite.cs" />
+    <Compile Include="Forms\FormAutorateText.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormAutorateText.Designer.cs">
+      <DependentUpon>FormAutorateText.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormCheckLicense.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormCheckLicense.Designer.cs">
+      <DependentUpon>FormCheckLicense.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormError.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormError.Designer.cs">
+      <DependentUpon>FormError.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormLimits.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormLimits.Designer.cs">
+      <DependentUpon>FormLimits.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormMainMenuEvents.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormMainRatingTextBoxes.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormBlinds.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormBlinds.Designer.cs">
+      <DependentUpon>FormBlinds.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Infrastructure\Database\AvailableDatabaseResolver.cs" />
+    <Compile Include="Infrastructure\Database\DatabaseResolver.cs" />
+    <Compile Include="Infrastructure\Data\DatabaseFunctions.cs" />
+    <Compile Include="Infrastructure\Data\Hm2Database.cs" />
+    <Compile Include="Infrastructure\Data\HoldemManagerDatabase.cs" />
+    <Compile Include="Infrastructure\Data\IDatabase.cs" />
+    <Compile Include="Infrastructure\Data\IPokerDatabase.cs" />
+    <Compile Include="Infrastructure\Data\PokerTrackerDatabase.cs" />
+    <Compile Include="Infrastructure\Data\Pt4Database.cs" />
+    <Compile Include="Infrastructure\IoC.cs" />
+    <Compile Include="Infrastructure\PlayersMapping.cs" />
+    <Compile Include="Model\Database.cs" />
+    <Compile Include="Model\DatabaseType.cs" />
+    <Compile Include="Model\DatabaseTypeEnum.cs" />
+    <Compile Include="Model\DbField.cs" />
+    <Compile Include="Model\DbPlayer.cs" />
+    <Compile Include="Model\DefinitionType.cs" />
+    <Compile Include="Model\GameType.cs" />
+    <Compile Include="Model\CompiledResultsMonth.cs" />
+    <Compile Include="Model\Label.cs" />
+    <Compile Include="Model\Player.cs" />
+    <Compile Include="Model\Players.cs" />
+    <Compile Include="Model\RawPlayerData.cs" />
+    <Compile Include="Model\User.cs" />
+    <Compile Include="Ratings\PlayersRating.cs" />
+    <Compile Include="Ratings\SinglePlayerRating.cs" />
+    <Compile Include="Enums\TrackerEnum.cs" />
+    <Compile Include="Extensions\CheckLicense.cs" />
+    <Compile Include="Forms\FormAbout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormAbout.Designer.cs">
+      <DependentUpon>FormAbout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormDatabase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormDatabase.Designer.cs">
+      <DependentUpon>FormDatabase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormHelp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormHelp.Designer.cs">
+      <DependentUpon>FormHelp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormWork.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormWork.Designer.cs">
+      <DependentUpon>FormWork.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Rating.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Extensions\DatabaseSettingExtension.cs" />
+    <Compile Include="Ratings\RatingRemoverSorter.cs" />
+    <Compile Include="Ratings\RatingText.cs" />
+    <Compile Include="Resolver\NoteFileResolver.cs" />
+    <Compile Include="Tools\JsonSerializer.cs" />
+    <Compile Include="Web\MailSend.cs" />
+    <Compile Include="Web\NetWorkTime.cs" />
+    <Compile Include="Web\ReadBlacklisted.cs" />
+    <Compile Include="Web\UpdateCheck.cs" />
+    <Compile Include="Xml\Definitions\RatingDefinitions.cs" />
+    <Compile Include="Configuration\ParseHoldemManagerConfiguration.cs" />
+    <Compile Include="Configuration\ParsePokerTrackerConfiguration.cs" />
+    <Compile Include="Xml\OlderSettings.cs" />
+    <Compile Include="Xml\PartyPoker\PartyPokerNotes.cs" />
+    <Compile Include="Xml\IPokersiteNotes.cs" />
+    <Compile Include="Xml\Pokerstars\PokerstarsNotes.cs" />
+    <EmbeddedResource Include="Forms\FormAbout.resx">
+      <DependentUpon>FormAbout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormAutorateText.resx">
+      <DependentUpon>FormAutorateText.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormCheckLicense.resx">
+      <DependentUpon>FormCheckLicense.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormDatabase.resx">
+      <DependentUpon>FormDatabase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormError.resx">
+      <DependentUpon>FormError.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormHelp.resx">
+      <DependentUpon>FormHelp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormLimits.resx">
+      <DependentUpon>FormLimits.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormWork.resx">
+      <DependentUpon>FormWork.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormBlinds.resx">
+      <DependentUpon>FormBlinds.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Save.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SaveAs.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Open.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Exit.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SetupDatabase.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RatePlayer.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Info.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LoadPlayers.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ToolTip.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LogoBig.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Help.htm" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\About.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Help1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\License.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\IconMain.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\RatingDefintion.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="PartyPokerColor.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

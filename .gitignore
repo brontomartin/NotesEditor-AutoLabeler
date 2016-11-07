@@ -1,0 +1,10 @@
+_ReSharper.*
+*.cache
+*.user
+*.suo
+debug/
+build/
+bin/
+obj/
+*.sonar*
+*.ReSharper

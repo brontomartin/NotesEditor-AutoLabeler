@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<notes>
+  <labels>
+    <label id="0" color="1985FF">orange</label>
+    <label id="1" color="00FFFF">yellow</label>
+    <label id="2" color="30FF97">green</label>
+    <label id="3" color="E1FF80">blue</label>
+    <label id="4" color="303EFF">red</label>
+    <label id="5" color="000000">symbol1</label>
+    <label id="6" color="FF0000">symbol2</label>
+    <label id="7" color="00FF00">symbol3</label>
+  </labels>
+</notes>
